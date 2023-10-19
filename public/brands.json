@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "picture": "https://i.ibb.co/Hx9H6Xs/Apple-Logo.png",
+        "title": "Apple"
+    },
+    {
+        "id": 2,
+        "picture": "https://i.ibb.co/cwhq0p2/Samsung-Logo.png",
+        "title": "Samsung"
+    },
+    {
+        "id": 3,
+        "picture": "https://i.ibb.co/FHddRBY/Lenovo-Logo.png",
+        "title": "Lenovo"
+    },
+    {
+        "id": 4,
+        "picture": "https://i.ibb.co/yWvV5sm/Sony-logo.png",
+        "title": "Sony"
+    },
+    {
+        "id": 5,
+        "picture": "https://i.ibb.co/fCf5Jcq/Xiaomi-logo.png",
+        "title": "Xiaomi"
+
+    },
+    {
+        "id": 6,
+        "picture": "https://i.ibb.co/SBz6PLx/Siemens-logo.png",
+        "title": "Siemens"
+    
+    }
+]
