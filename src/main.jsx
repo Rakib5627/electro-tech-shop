@@ -17,12 +17,14 @@ import AuthProvider from './components/providers/AuthProvider.jsx';
 import SignUp from './components/SignUp.jsx';
 import Users from './components/Users.jsx';
 import PrivateRoute from './components/routes/PrivateRoute.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 // import Brands from './components/Brands.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement : <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
