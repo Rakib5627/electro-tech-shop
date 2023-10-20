@@ -10,7 +10,7 @@ const Details = () => {
 
     const handleCart = () => {
         const cartProduct = { name, photo, brand, price };
-        fetch('', {
+        fetch('http://localhost:5000/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
