@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 
 const SignUp = () => {
 
-    const { createUser } = useContext(AuthContext)
+    const { createUser , signInWithGoogle } = useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -45,19 +45,19 @@ const SignUp = () => {
 
                         }
                     })
-
-                // Swal.fire({
-                //     icon: 'success',
-                //     text: 'User created & logged in Successfully',
-                //     timer: 1000
-
-                // });
-
                 navigate(location?.state ? location.state : '/');
             })
+            .catch(error => {
+                console.error(error)
+            })
+    }
 
-
-
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : '/');
+            })
             .catch(error => {
                 console.error(error)
             })
@@ -102,7 +102,7 @@ const SignUp = () => {
                 </form>
                 <p className="text-center mt-4">Already have an account? <Link className="text-blue-600 font-bold" to="/login">Login Here</Link></p>
                 <div className="border border-x-1 opacity-20"></div>
-                {/* <p className="mt-4 text-center"><button onClick={handleGoogleSignIn} className="btn btn-ghost">Sign in with Google</button></p> */}
+                <p className="mt-4 text-center"><button onClick={handleGoogleSignIn} className="btn btn-ghost">Sign in with Google</button></p>
             </div>
         </div>
     );

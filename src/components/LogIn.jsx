@@ -7,7 +7,7 @@ import { AuthContext } from "./providers/AuthProvider";
 
 const LogIn = () => {
 
-    const {signIn} = useContext(AuthContext);
+    const {signIn , signInWithGoogle} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -50,6 +50,18 @@ const LogIn = () => {
     }
 
 
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result.user)
+                navigate(location?.state ? location.state : '/');
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
+
     return (
         <div className=" text-my-blue bg-neutral-50 mx-auto md:w-1/2 shadow-xl py-5">
                 <h2 className="text-3xl font my-10 text-center">Please Login</h2>
@@ -72,7 +84,7 @@ const LogIn = () => {
                 </form>
                 <p className="text-center my-4">Do not have an account <Link className="text-blue-600 font-bold" to="/register">Register</Link></p>
                 <div className="border border-x-1 opacity-20"></div>
-                {/* <p className="mt-4 text-center"><button onClick={handleGoogleSignIn} className="btn btn-ghost">Sign in with Google</button></p> */}
+                <p className="mt-4 text-center"><button onClick={handleGoogleSignIn} className="btn btn-ghost">Sign in with Google</button></p>
             </div>
       
     );
