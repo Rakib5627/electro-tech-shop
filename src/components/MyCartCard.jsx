@@ -46,17 +46,17 @@ const MyCartCard = ({ card , carts , setCarts }) => {
 
 
         return (
-            <div className="bg-base-100 shadow-xl flex justify-between items-center px-5">
+            <div className="bg-base-100 shadow-xl md:flex justify-between items-center px-5 py-2">
                 <figure className="">
-                    <img src={photo} alt="" className="rounded-xl h-48" />
+                    <img src={photo} alt="" className="rounded-xl border h-48" />
                 </figure>
-                <div className="">
+                <div className="mx-5 md:mx-0">
                     <h2 className="card-title mb-2">{name}</h2>
-                    <p>{brand}</p>
+                    <p className="">{brand}</p>
                     <p className="my-2">Price :{price} Tk</p>
                     <div className="card-actions">
-                        <button className="bg-[#3ecec0] hover:bg-[#2eb7a9] hover:border-[#331A15] text-[#331A15] p-1 rounded">Order Now</button>
-                        <button onClick={() => handleDelete(_id)} className="bg-[#3ecec0] hover:bg-[#2eb7a9] hover:border-[#331A15] text-[#331A15] p-1 rounded">X</button>
+                        <button className="border hover:border-[#331A15] text-[#331A15] p-1 rounded">Order Now</button>
+                        <button onClick={() => handleDelete(_id)} className="border hover:border-[#331A15] text-[#331A15] p-1 rounded">X</button>
 
                     </div>
                 </div>

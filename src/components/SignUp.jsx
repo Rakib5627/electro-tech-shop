@@ -14,6 +14,8 @@ const SignUp = () => {
     const handleSignUp = e => {
         e.preventDefault();
         const form = e.target;
+        const name =form.name.value;
+        const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
@@ -22,7 +24,7 @@ const SignUp = () => {
             .then(result => {
                 console.log(result.user)
 
-                const user = { email };
+                const user = { email , name , photo };
 
                 fetch('http://localhost:5000/users', {
                     method: 'POST',

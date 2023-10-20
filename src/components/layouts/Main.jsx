@@ -9,9 +9,13 @@ const Main = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+            <div className=" bg-amber-50">
+            <div className=" mx-2 max-w-6xl md:mx-auto pb-20">
+                <Navbar></Navbar>
+                <Outlet></Outlet>
+            </div>
+        </div>
+        <Footer></Footer>
         </div>
     );
 };
