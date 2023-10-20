@@ -13,6 +13,10 @@ import Details from './components/Details.jsx';
 import Main from './components/layouts/Main.jsx';
 import Products from './components/Products.jsx';
 import Update from './components/Update.jsx';
+import AuthProvider from './components/providers/AuthProvider.jsx';
+import SignUp from './components/SignUp.jsx';
+import Users from './components/Users.jsx';
+import PrivateRoute from './components/routes/PrivateRoute.jsx';
 // import Brands from './components/Brands.jsx';
 
 const router = createBrowserRouter([
@@ -33,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/add",
-        element: <AddProduct></AddProduct>,
+        element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>,
       },
       {
         path: "/update/:brand/:id",
@@ -42,15 +46,25 @@ const router = createBrowserRouter([
       },
       {
         path: "/carts",
-        element: <MyCart></MyCart>,
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
       },
       {
         path: "/login",
         element: <LogIn></LogIn>,
       },
       {
-        path: "/details",
-        element: <Details></Details>,
+        path: "/register",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "/users",
+        element: <Users></Users>,
+        loader : () => fetch('http://localhost:5000/users')
+      },
+      {
+        path: "/details/:brand/:id",
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/products/${params.brand}/${params.id}`),
       },
     ]
   },
@@ -59,6 +73,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

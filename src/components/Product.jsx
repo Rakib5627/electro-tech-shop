@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 
 const Product = ({product}) => {
@@ -19,7 +20,7 @@ const Product = ({product}) => {
                     <p>{description}</p>
                    
                     <div className="card-actions justify-end">
-                        <Link><button className="btn btn-primary">Details</button></Link>
+                        <Link to={`/details/${brand}/${_id}`}><button className="btn btn-primary">Details</button></Link>
                         <Link to={`/update/${brand}/${_id}`}><button className="btn btn-primary">Update</button></Link>
                     </div>
                 </div>
@@ -27,5 +28,9 @@ const Product = ({product}) => {
         </div>
     );
 };
+
+Product.propTypes = {
+    product : PropTypes.object
+}
 
 export default Product;
