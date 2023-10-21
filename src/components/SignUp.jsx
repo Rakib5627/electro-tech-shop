@@ -20,13 +20,29 @@ const SignUp = () => {
         const password = form.password.value;
         console.log(email, password);
 
+        if (password.length < 6) {
+            Swal.fire('Password must be at least 6 characters long.');
+            return;
+        }
+
+        if (!/[A-Z]/.test(password)) {
+            Swal.fire("Password must contain at least one capital letter.");
+            return;
+        }
+
+        if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+            Swal.fire("Password must contain at least one special character.");
+            return;
+        }
+
+
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
 
                 const user = { email , name , photo };
 
-                fetch('http://localhost:5000/users', {
+                fetch('https://electro-tech-server-229ldwrgt-rakib5627.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

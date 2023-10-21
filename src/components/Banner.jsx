@@ -1,4 +1,5 @@
 import banner from "../assets/pexels-victoria-strelkaph-11034413.jpg"
+
 const Banner = () => {
     return (
         <div className="my-20">
