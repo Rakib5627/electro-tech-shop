@@ -45,7 +45,7 @@ const AddProduct = () => {
 
 
     return (
-        <div className="bg-[#F4F3F0] p-24">
+        <div className="bg-[#F4F3F0] md:p-24">
             <h2 className="text-3xl font-extrabold text-center mb-10">Add a New Product</h2>
             <form onSubmit={handleAddProduct}>
 
@@ -58,7 +58,7 @@ const AddProduct = () => {
                             <input type="text" name="name" placeholder="Name" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-4">
 
                         <label className="label">
                             <span className="label-text">Photo</span>
@@ -79,7 +79,7 @@ const AddProduct = () => {
                             <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-4">
                         <label className="label">
                             <span className="label-text">Product Type</span>
                         </label>
@@ -107,7 +107,7 @@ const AddProduct = () => {
                             </select>
                         </label>
                     </div>
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-4">
                         <label className="label">
                             <span className="label-text">Rating</span>
                         </label>
