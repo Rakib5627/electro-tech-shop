@@ -13,7 +13,7 @@ const Brands = () => {
             <div className="grid md:grid-cols-2 gap-5">
                 {
                     brandData.map(brand => <Link to={`/products/${brand.title}`} key={brand.id}>
-                        <div className="card card-compact bg-base-100 shadow-xl bg-blue-200 px-2">
+                        <div className="card card-compact bg-base-100 shadow-xl px-2">
                             <figure><img src={brand.picture} alt="Shoes" className=" md:h-40" /></figure>
                             <div className="card-body">
                                 <h2 className="text-center border-y">{brand.title}</h2>
