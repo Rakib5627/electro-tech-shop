@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {
          path: "/products/:brand",
         element: <Products></Products>,
-        loader: ({params}) => fetch(`https://electro-tech-server-229ldwrgt-rakib5627.vercel.app/products/${params.brand}`),
+        loader: ({params}) => fetch(`https://electro-tech-server-8dovk83tm-rakib5627.vercel.app/products/${params.brand}`),
         
       },
       {
@@ -44,12 +44,12 @@ const router = createBrowserRouter([
       {
         path: "/update/:brand/:id",
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({params}) => fetch(`https://electro-tech-server-229ldwrgt-rakib5627.vercel.app/products/${params.brand}/${params.id}`),
+        loader: ({params}) => fetch(`https://electro-tech-server-8dovk83tm-rakib5627.vercel.app/products/${params.brand}/${params.id}`),
       },
       {
         path: "/carts",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader : () => fetch('https://electro-tech-server-229ldwrgt-rakib5627.vercel.app/cart')
+        loader : () => fetch('https://electro-tech-server-8dovk83tm-rakib5627.vercel.app/cart')
       },
       {
         path: "/login",
@@ -62,12 +62,12 @@ const router = createBrowserRouter([
       {
         path: "/users",
         element: <Users></Users>,
-        loader : () => fetch('https://electro-tech-server-229ldwrgt-rakib5627.vercel.app/users')
+        loader : () => fetch('https://electro-tech-server-8dovk83tm-rakib5627.vercel.app/users')
       },
       {
         path: "/details/:brand/:id",
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params}) => fetch(`https://electro-tech-server-229ldwrgt-rakib5627.vercel.app/products/${params.brand}/${params.id}`),
+        loader: ({params}) => fetch(`https://electro-tech-server-8dovk83tm-rakib5627.vercel.app/products/${params.brand}/${params.id}`),
       },
     ]
   },

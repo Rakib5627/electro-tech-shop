@@ -22,7 +22,7 @@ const MyCartCard = ({ card , carts , setCarts }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`https://electro-tech-server-229ldwrgt-rakib5627.vercel.app/cart/${_id}`, {
+                fetch(`https://electro-tech-server-8dovk83tm-rakib5627.vercel.app/cart/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

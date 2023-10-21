@@ -19,7 +19,7 @@ const AddProduct = () => {
         const product = { name, photo, brand, type, price, rating, description };
         console.log(product);
 
-        fetch('https://electro-tech-server-229ldwrgt-rakib5627.vercel.app/products', {
+        fetch('https://electro-tech-server-8dovk83tm-rakib5627.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

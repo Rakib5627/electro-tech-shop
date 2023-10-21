@@ -35,14 +35,14 @@ const SignUp = () => {
             return;
         }
 
-        
+
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
 
                 const user = { email , name , photo };
 
-                fetch('https://electro-tech-server-229ldwrgt-rakib5627.vercel.app/users', {
+                fetch('https://electro-tech-server-8dovk83tm-rakib5627.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

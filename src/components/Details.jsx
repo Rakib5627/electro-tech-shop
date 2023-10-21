@@ -10,7 +10,7 @@ const Details = () => {
 
     const handleCart = () => {
         const cartProduct = { name, photo, brand, price };
-        fetch('https://electro-tech-server-229ldwrgt-rakib5627.vercel.app/cart', {
+        fetch('https://electro-tech-server-8dovk83tm-rakib5627.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
