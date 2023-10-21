@@ -8,7 +8,7 @@ import userimg from "../assets/istockphoto-1337144146-612x612.jpg"
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
-    console.log(user)
+    // console.log(user)
 
     const handleSignOut = () => {
         logOut()

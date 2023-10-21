@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/update/:brand/:id",
-        element: <Update></Update>,
+        element: <PrivateRoute><Update></Update></PrivateRoute>,
         loader: ({params}) => fetch(`https://electro-tech-server-229ldwrgt-rakib5627.vercel.app/products/${params.brand}/${params.id}`),
       },
       {

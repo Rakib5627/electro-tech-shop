@@ -35,7 +35,7 @@ const SignUp = () => {
             return;
         }
 
-
+        
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
